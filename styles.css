@@ -10,6 +10,7 @@
 
         /*--FONTS--*/
         --ff--Staatliches: Staatliches,cursive;
+        --ff--SquarePeg: SquarePeg,cursive;
 }
 /*--GLOBAL--*/
 *{
@@ -28,25 +29,26 @@ body{
 header{
     width: 100%;
     padding: 1rem;
-    
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     align-content: center;
     text-align: center;
 }
+/*--PAGE TITLE--*/
 header .letter{
     font-family: var(--ff--Staatliches);
-    font-size: 4rem;
+    font-size: 8rem;
     text-transform: uppercase;
 }
 header .page-title span{
     display: inline-block;
     animation: color 4s infinite, flip 8s infinite;
     animation-delay:calc(.2s * var(--i));
-
-
 }
+/*--PAGE TITLE ANIMATIONS--*/
 @keyframes flip{
     0%,80%{
         transform: rotateY(360deg);
@@ -63,7 +65,47 @@ header .page-title span{
         color: var(--clr--yellow);
     }
 }
+/*--QuoteBlock--*/
+header .quote-toggle{
+    width: 50%;
+    height: 50%;
+    background-image: url(/assets/images/flattering.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+}
+header .quote-toggle p{
+    background-color: yellow;
+    border: solid;
+    border-width: 1rem;
+    border-radius: .5rem;
+    border-color: var(--clr--Green);
+    position: absolute;
+    top: 50%;
+    height: 25%;
+    width: 50%;
+    left: 50%;
+}
+header .header-quote{
+    /*--Hide it n style it--*/
+    display: none;
+    width: 50%;
+    padding: 1rem;
+    background-color: var(--clr--yellow);
+    color: var(--clr--Green);
+    border: solid;
+    border-color: var(--clr--Green);
+    border-width: 1rem;
+    font-size: 3rem;
+    box-shadow: inset;
+    font-family: var(--ff--SquarePeg);
+    transition: all 2s ease-in-out;
+}
 
+header .header-quote.active{
+    display: block;
+}
 header img{
     width: 50px;
 }
