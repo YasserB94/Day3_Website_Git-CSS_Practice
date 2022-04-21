@@ -7,6 +7,9 @@
         --clr--yellow:#f7cb15;
         --clr--black:#02020B;
         --clr--white:#ffffff;
+
+        /*--FONTS--*/
+        --ff--Staatliches: Staatliches,cursive;
 }
 /*--GLOBAL--*/
 *{
@@ -17,7 +20,50 @@
 body{
     background-color: var(--clr--black);
     color: var(--clr--white);
+    /*--BASE FONT SIZE--*/
+    font-size: 18px;
 }
 
 /*--HEADER--*/
+header{
+    width: 100%;
+    padding: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+header .letter{
+    font-family: var(--ff--Staatliches);
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+header .page-title span{
+    display: inline-block;
+    animation: color 4s infinite, flip 8s infinite;
+    animation-delay:calc(.2s * var(--i));
 
+
+}
+@keyframes flip{
+    0%,80%{
+        transform: rotateY(360deg);
+    }
+}
+@keyframes color{
+    25%{
+        color: var(--clr--Red);
+    }
+    50%{
+        color: var(--clr--Green);
+    }
+    75%{
+        color: var(--clr--yellow);
+    }
+}
+
+header img{
+    width: 50px;
+}
