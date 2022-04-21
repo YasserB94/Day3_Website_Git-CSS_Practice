@@ -1,0 +1,23 @@
+:root{
+    /*----THEME----*/
+        /*--COLORS--*/
+        --clr--Red:#D7263D;
+        --clr--Green:#005C69;
+        --clr--Gray:#A4a5ae;
+        --clr--yellow:#f7cb15;
+        --clr--black:#02020B;
+        --clr--white:#ffffff;
+}
+/*--GLOBAL--*/
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
+}
+body{
+    background-color: var(--clr--black);
+    color: var(--clr--white);
+}
+
+/*--HEADER--*/
+
